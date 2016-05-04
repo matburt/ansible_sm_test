@@ -1,0 +1,5 @@
+- hosts: all
+  connection: local
+  gather_facts: false
+  tasks:
+    - git: dest={{project_path|quote}} repo={{scm_url|quote}} version={{scm_branch|quote}} force={{scm_clean}}
